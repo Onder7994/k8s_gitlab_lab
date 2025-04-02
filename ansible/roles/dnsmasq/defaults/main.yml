@@ -1,0 +1,14 @@
+dns_port: 53
+listen_address: "127.0.0.1,192.168.0.205"
+local_domain: "dev.local"
+cache_size: 1000
+local_domain_list:
+  - address=/k8s-master.{{ local_domain }}/192.168.0.201
+  - address=/k8s-worker1.{{ local_domain }}/192.168.0.202
+  - address=/k8s-worker2.{{ local_domain }}/192.168.0.203
+  - address=/gitlab.{{ local_domain }}/192.168.0.206
+  - address=/.{{ local_domain }}/192.168.0.204
+
+nameservers_list:
+  - 8.8.8.8
+  - 192.168.0.1
